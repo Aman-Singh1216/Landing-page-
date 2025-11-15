@@ -1,0 +1,248 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(14, 12, 21);
+    font-family: monospace;
+    color: lightgray;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 30px;
+    border: 0.5px solid rgba(110, 101, 114, 0.5);
+    z-index: 999;
+
+}
+
+.head-left {
+    display: flex;
+    align-items: center;
+}
+
+.head-left img {
+    height: 75px;
+    margin-right: 15px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: grey;
+    font-weight: 900;
+    font-size: 15px;
+    transition: 0.3s
+}
+
+header a:hover {
+    color: rgb(227, 227, 227);
+    text-shadow: (0 0 15px) rgba(155, 155, 155, 0.314);
+}
+
+.head-right {
+    display: flex;
+    align-items: center;
+}
+
+.button-box {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    margin-left: 25px;
+    background: linear-gradient(to right, green, purple, violet, blue, lightblue, red, green);
+    border-radius: 10px;
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    clip-path: polygon(0 0, 82% 0, 100% 34%, 100% 80%, 100% 99%, 0% 100%, 0% 80%, 0% 20%);
+}
+
+@keyframes animationGradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+.head-right button {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    border: none;
+    background-color: rgb(14, 12, 21);
+    color: lightgray;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 82% 0, 100% 34%, 100% 80%, 100% 99%, 0% 100%, 0% 80%, 0% 20%);
+    cursor: pointer;
+}
+
+.head-right button:hover {
+    color: blueviolet;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 150vh;
+}
+
+.hero-blur-image {
+    position: absolute;
+    width: 100%;
+    top: -15%;
+}
+
+.hero-rings-image {
+    position: absolute;
+    height: 90%;
+    top: 100px;
+    opacity: 0.4;
+}
+
+.hero-icons-image {
+    position: absolute;
+    width: 100%;
+    top: 8%;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 8%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+}
+
+.hero h3 {
+    position: absolute;
+    top: 22%;
+    font-size: 18px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.hero button {
+    position: absolute;
+    top: 35%;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    height: 50px;
+    width: 140px;
+    font-weight: bold;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 16% 50%, 0% 0%);
+    transition: 0.3s;
+}
+
+
+.hero button:hover {
+    opacity: 0.7;
+    color: violet;
+}
+
+.hero-image-box {
+    margin-top: 350px;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: linear-gradient(to right, green, purple, violet, blue, lightblue, red, green);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+}
+
+.hero-image-box .robot-box {
+    width: 99%;
+    height: 98%;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.hero-image-box .robot-box img {
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: hard-light;
+}
+
+.hero-image-box .element2 {
+    position: absolute;
+    top: 25%;
+    right: -15%;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 25%;
+}
+
+.hero-image-box .element2 img {
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.426);
+}
+
+.parallax {
+    transition: transform 1s linear;
+}
+
+/* tablet responsive */
+
+@media screen and (max-width: 1000px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    header ul {
+        min-width: 300px;
+    }
+
+    .head-right a {
+        margin-right: -20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        top: 10%;
+    }
+
+    .hero-image-box {
+        height: 400px;
+        width: 80%;
+    }
+
+    .hero-image-box .element2 {
+        right: 5%;
+        top: -12%;
+    }
+
+    .head-left h1 {
+        margin-left: -50px;
+    }
+}
